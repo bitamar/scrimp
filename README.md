@@ -1,0 +1,4 @@
+scrimp
+======
+
+Expenses tracker
