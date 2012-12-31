@@ -5,3 +5,12 @@
  */
 
 include_once 'scrimp.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function scrimp_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}
