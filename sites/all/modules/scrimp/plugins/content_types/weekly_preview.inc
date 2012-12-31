@@ -12,6 +12,11 @@ $plugin = array(
 );
 
 function scrimp_weekly_preview_content_type_render($subtype, $conf, $args, $context) {
+  global $user;
+  if (empty($user->uid)) {
+  	return;
+  }	
+  
   $block = new stdClass();
   $block->title = t('Weekly preview');
   $block->module = 'scrimp';
